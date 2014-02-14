@@ -29,65 +29,31 @@
 
     <!-- 底部菜单页面 -->
 
-    <FrameLayout
+    <RadioGroup
+        android:id="@+id/bottomRg"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom" >
+        android:orientation="horizontal" >
 
-        <RadioGroup
-            android:id="@+id/bottomRg"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/rg_btn_style"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_home_selector"
+            android:text="@string/tab_home" >
+        </RadioButton>
 
-            <RadioButton
-                android:id="@+id/rb_home"
-                style="@style/rg_btn_style"
-                android:checked="true"
-                android:drawableTop="@drawable/tab_home_selector"
-                android:text="@string/tab_home" >
-            </RadioButton>
+        <RadioButton
+            android:id="@+id/rb_message"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/tab_message_selector"
+            android:text="@string/tab_message" />
 
-            <RadioButton
-                android:id="@+id/rb_message"
-                style="@style/rg_btn_style"
-                android:drawableTop="@drawable/tab_message_selector"
-                android:text="@string/tab_message" />
-
-            <RadioButton
-                android:id="@+id/rb_setting"
-                style="@style/rg_btn_style"
-                android:drawableTop="@drawable/tab_setting_selector"
-                android:text="@string/tab_setting" />
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/message_mention"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|left|center"
-            android:layout_marginLeft="105dip"
-            android:layout_marginTop="1dp"
-            android:background="@drawable/tab_message_tip"
-            android:gravity="center"
-            android:text="10"
-            android:textColor="#fff"
-            android:textSize="10sp"
-            android:visibility="visible" />
-
-        <TextView
-            android:id="@+id/message_person"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|left|center"
-            android:layout_marginLeft="170dip"
-            android:layout_marginTop="1dp"
-            android:background="@drawable/tab_message_tip"
-            android:gravity="center"
-            android:text="10"
-            android:textColor="#fff"
-            android:textSize="10sp"
-            android:visibility="visible" />
-    </FrameLayout>
+        <RadioButton
+            android:id="@+id/rb_setting"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/tab_setting_selector"
+            android:text="@string/tab_setting" />
+    </RadioGroup>
 
 </LinearLayout>
